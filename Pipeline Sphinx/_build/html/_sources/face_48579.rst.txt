@@ -1,0 +1,7 @@
+face\_48579 module
+==================
+
+.. automodule:: face_48579
+    :members:
+    :undoc-members:
+    :show-inheritance:

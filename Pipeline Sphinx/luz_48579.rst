@@ -1,0 +1,7 @@
+luz\_48579 module
+=================
+
+.. automodule:: luz_48579
+    :members:
+    :undoc-members:
+    :show-inheritance:

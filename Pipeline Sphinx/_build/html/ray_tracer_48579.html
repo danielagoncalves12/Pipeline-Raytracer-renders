@@ -1,0 +1,182 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ray_tracer_48579 module &#8212; Projeto Pipeline 48579  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="reta_48579 module" href="reta_48579.html" />
+    <link rel="prev" title="ponto_48579 module" href="ponto_48579.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-ray_tracer_48579">
+<span id="ray-tracer-48579-module"></span><h1>ray_tracer_48579 module<a class="headerlink" href="#module-ray_tracer_48579" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ray_tracer_48579.RayTracer">
+<em class="property">class </em><code class="descclassname">ray_tracer_48579.</code><code class="descname">RayTracer</code><span class="sig-paren">(</span><em>lista_faces</em>, <em>lista_luzes</em>, <em>camara</em>, <em>cor_fundo</em><span class="sig-paren">)</span><a class="headerlink" href="#ray_tracer_48579.RayTracer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ray_tracer_48579.RayTracer.get_cor_face">
+<code class="descname">get_cor_face</code><span class="sig-paren">(</span><em>face</em>, <em>ponto</em><span class="sig-paren">)</span><a class="headerlink" href="#ray_tracer_48579.RayTracer.get_cor_face" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calcula a cor presente na face.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">CorRGB da face em um certo ponto.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ray_tracer_48579.RayTracer.get_cor_vista_por_raio">
+<code class="descname">get_cor_vista_por_raio</code><span class="sig-paren">(</span><em>raio</em><span class="sig-paren">)</span><a class="headerlink" href="#ray_tracer_48579.RayTracer.get_cor_vista_por_raio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Devolve a cor vista por raio.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Cor vista por raio.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ray_tracer_48579.RayTracer.get_face_mais_proxima">
+<code class="descname">get_face_mais_proxima</code><span class="sig-paren">(</span><em>lista_faces</em><span class="sig-paren">)</span><a class="headerlink" href="#ray_tracer_48579.RayTracer.get_face_mais_proxima" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encontra a face mais próxima na lista de faces.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Face mais proxima na lista_faces.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ray_tracer_48579.RayTracer.get_face_visivel">
+<code class="descname">get_face_visivel</code><span class="sig-paren">(</span><em>raio</em><span class="sig-paren">)</span><a class="headerlink" href="#ray_tracer_48579.RayTracer.get_face_visivel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encontra a face visivel dentro do raio dado.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Face visivel no raio.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ray_tracer_48579.RayTracer.get_sombra">
+<code class="descname">get_sombra</code><span class="sig-paren">(</span><em>ponto</em>, <em>luz</em>, <em>face_ponto</em><span class="sig-paren">)</span><a class="headerlink" href="#ray_tracer_48579.RayTracer.get_sombra" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verifica se existe sombra.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Sombra (True) ou Sem Sombra (False).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ray_tracer_48579.RayTracer.renderiza">
+<code class="descname">renderiza</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ray_tracer_48579.RayTracer.renderiza" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processo de renderização.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Imagem renderizada.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">Pipeline_48579</a><ul>
+      <li>Previous: <a href="ponto_48579.html" title="previous chapter">ponto_48579 module</a></li>
+      <li>Next: <a href="reta_48579.html" title="next chapter">reta_48579 module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Daniela Gonçalves.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/ray_tracer_48579.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,7 @@
+vetor\_48579 module
+===================
+
+.. automodule:: vetor_48579
+    :members:
+    :undoc-members:
+    :show-inheritance:
